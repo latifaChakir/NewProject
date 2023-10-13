@@ -14,7 +14,7 @@ body {
 }
 
 .cadre {
-  border: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -27,7 +27,6 @@ body {
     font-weight: bold;
 }
 .cadre input{ 
-    margin-top: 10px;
     width: 300px;
     height: 30px;
     flex-shrink: 0;
@@ -128,7 +127,7 @@ header {
 
 .love{
     display: flex;
-    gap: 300px;
+    gap: 600px;
     align-items: center;
 }
 
@@ -287,6 +286,52 @@ footer p{
   font-family: Inter;
   font-size: 17px;
   
+}
+
+.marque input[type="checkbox"] {
+    display: none;
+}
+
+.marque label::before {
+    content: '\2610';
+    color: green; 
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+
+.marque input[type="checkbox"]:checked + label::before {
+    content: '\2611'; 
+    color: green; 
+}
+
+
+
+.mar input[type="checkbox"] {
+    display: none;
+}
+
+.mar label::before {
+    content: '\2610';
+    color: green; 
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+
+.mar input[type="checkbox"]:checked + label::before {
+    content: '\2611'; 
+    color: green; 
 }
 
 
