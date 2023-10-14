@@ -279,4 +279,12 @@ footer p{
                     content: '\2611'; 
                     color: green; 
                 }
+
+                .marque-price label {
+                    color: #475569; 
+                }
+        
+                .marque-price input[type="range"] {
+                    filter: sepia(90%) saturate(3200%) ;  
+                }
    
