@@ -287,4 +287,285 @@ footer p{
                 .marque-price input[type="range"] {
                     filter: sepia(90%) saturate(3200%) ;  
                 }
+/*responsibe*/
+                @media screen and (max-width: 768px) {
+                    .cadre {
+                      border-bottom: 1px solid #E2E8F0;
+                      align-items: center;
+                      display: flex;
+                      width: 100%;
+                      height: 40px;
+                      flex-shrink: 0;
+                      
+                    }
+                    
+                    .cadre p {
+                        font-weight: bold;
+                    }
+                    
+                    
+                    header {
+                      color: black;
+                      text-align: center;
+                      padding: 0px;
+                    }
+                    
+                    
+                    .cadre ul {
+                      margin-right: 10px;
+                      list-style: none;
+                      margin-top: 0px;
+                    }
+                    
+                    .cadre li {
+                      display: inline;
+                    }
+                    .cadre img{
+                      width: 20px;
+                      height: 20px;
+                    }
+                    
+                    .cadre a {
+                      margin-right: 0px;
+                      text-decoration: none;
+                      color: black;
+                      font-weight: bold;
+                    }
+                  
+                    .header-img  img{
+                      width: 20px;
+                      height: 20px;
+                    }
+                    
+                    .cadre .header-img  input{
+                        margin-right: 20px;
+                        width: 100px;
+                        height: 20px;
+                        font-size: 10px;
+                        border-radius: 8px;
+                        border: 2px solid #E2E8F0;
+                        justify-content: center;
+                        
+                      }
+                    .items {
+                      justify-content: center;
+                      align-items: center;
+                      margin-left: 0px;
+                      display: flex;
+                      height: 10px;
+                      top: 0px;
+                      font-size: 12px;
+                      
+                    }
+                    .items li a{
+                      color: #334155;
+                    }
+                    .items p{
+                      color: #334155;
+                    
+                    }
+
+                    .page2 {
+                        display: block;
+                        gap: 1px; 
+                        height: 100vh; 
+                    
+                      }
+                    
+                      .chercher {
+                        display: flex;
+                        gap: 0px;
+                      }
+                      .chercher p{
+                        font-size: 11px;
+
+                      }
+                     
+
+                      .select-input {
+                        width: 60px;
+                        height: 30px;
+                        font-size: 10px;
+                        color: #334155;
+                      }
+                      main {
+                        padding-bottom: 3650px;
+                        width: 100%;
+                      }
+                    
+                      h1{
+                        margin-left: 5px;
+                        font-family: Inter;
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: #334155;
+                        }
+                        .marque label{
+                            font-size: 12px;
+                        }
+                    
+                        .list-item{
+                            padding: 0px;
+                        }
+                    
+                        .shop{
+                            margin-bottom: 10px;
+                            display: flex;
+                            gap: 3px;
+                        }
+                        .shop img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                        .shop p{
+                            font-family: Inter;
+                            font-size:  12px;
+                            font-weight: 500;
+                            letter-spacing: 0em;
+                            text-align: left;
+                            color: #64748B;
+                    
+                        }
+                    
+                        .petit-reg1{
+                            margin-left: 10px;
+                            width: 80px;
+                            height: 36px;
+                            border-radius: 25px;
+                            background-color: #FACC15;
+                            
+                            }
+                            .petit-reg img {
+                                max-width: 80%;
+                               
+                               }
+                               
+                    
+                            .rec-cercle1{
+                                margin-left: 95px;
+                                margin-right: 10px;
+                                width: 40px;
+                              height: 40px;
+                              border-radius: 25px;
+                              background-color: #FACC15;
+                              
+                              }
+                              .rec-cercle1 img {
+                                max-width: 100%;
+                                margin-top: 6px;
+                                margin-left: 5px;
+                              }
+                    
+                              .rectangle2 p{
+                                margin-bottom: 1px;
+                                margin-left: 10px;
+                                font-family: Inter;
+                              font-size: 18px;
+                              font-weight: 400;
+                              letter-spacing: -0.04em;
+                              color: #475569;
+                              
+                              }
+                              .container1 {
+                                display: block;
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 8px;
+                              }
+                              .title {
+                                align-items: center;
+                                margin-left: 10px;
+                                display: flex;
+                                gap: 10px;
+                              }
+                              span {
+                              font-size: 24px;
+                              font-weight: 400;
+                              color: #f0f0f0;
+                              }
+                    
+                              .star6 {
+                                padding-top: 5px;
+                                justify-content: center;
+                                align-items: center;
+                                display: flex;
+                                gap: 10px;
+                              }
+                              .case {
+                                align-items: center;
+                                display: flex;
+                                gap: 10px;
+                                
+                              
+                              }
+                              
+                              .rectangle2{
+                                margin-bottom: 10px;
+                                width: 337px;
+                                height: 439px;
+                                top: 56px;
+                                margin-left: 20px;
+                                border-radius: 5px;
+                                background-color: #E2E8F0;
+                                }
+                              
+                                .load{
+                                  width:100%;
+                                  display: flex;
+                                  justify-content: center;
+                                  margin-top: 40px;
+                                }
+                    
+                                .chercher p{
+                                color: #475569;
+                                font-weight: 500;
+                                }
+                                .cadre input{ 
+                                        width: 300px;
+                                        height: 30px;
+                                        flex-shrink: 0;
+                                        left: 99px;
+                                        border-radius: 8px;
+                                        border: 2px solid #E2E8F0;
+                                      }
+                    
+                    
+                                      .marque input[type="checkbox"] {
+                                        display: none;
+                                    }
+                            
+                                    .marque label::before {
+                                        content: '\2610';
+                                        color: green; 
+                                        display: inline-block;
+                                        width: 20px;
+                                        height: 20px;
+                                        margin-right: 5px;
+                                        font-size: 20px;
+                                        line-height: 20px;
+                                        text-align: center;
+                                        
+                                    }
+                            
+                                    .marque input[type="checkbox"]:checked + label::before {
+                                        content: '\2611'; 
+                                        color: green; 
+                                    }
+                    
+                                    .marque-price label {
+                                        color: #475569; 
+                                    }
+                            
+                                    .marque-price input[type="range"] {
+                                        filter: sepia(90%) saturate(3200%) ;  
+                                    }
+
+                                    main {
+                                        padding-bottom: 3700px;
+                                        width: 100%;
+                                      }
+
+
+                }        
    
