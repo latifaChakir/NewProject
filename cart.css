@@ -465,13 +465,13 @@ footer p{
     }
     
     .love{
-        display: flex;
+        display: block;
         gap: 40px;
         align-items: center;
     }
 
     .love1{
-        display: flex;
+        display: block;
         gap: 1px;
         align-items: center;
     }
@@ -523,7 +523,7 @@ footer p{
     
       .Delivery {
         display: flex;
-        gap: 200px;
+        gap: 100px;
       }
       .Delivery span , .Delivery p{
         font-family: Inter;
@@ -535,7 +535,7 @@ footer p{
     
       .Shopping{
         display: flex;
-        gap: 154px;
+        gap: 58px;
       }
       .Shopping span , .Shopping p{
         font-family: Inter;
@@ -549,7 +549,7 @@ footer p{
       .total{
         display: flex;
         align-items: center;
-        gap: 210px;
+        gap: 120px;
         margin-top: 20px;
         
       }
@@ -690,6 +690,8 @@ footer p{
         content: '\2611'; 
         color: green; 
     }
+
+   
     
 }
 
