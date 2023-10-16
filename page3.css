@@ -80,7 +80,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 20px; 
-    height: 100vh; 
 
   }
   .carre{
@@ -600,6 +599,7 @@ header {
                 .page2 {
                     display: block;
                     margin-bottom: 50px;
+                    height: auto;
                 
                   }
                   .sty-carre {
@@ -634,6 +634,7 @@ header {
                     text-align: left;
                     color: #475569;
                     margin-bottom: 10px;
+                   
                 
                   }
                   .petit-reg1{
@@ -772,17 +773,20 @@ header {
                         width: 20px;
                         height: 20px;
                       }
-                
+                /**/
                       .pageDet p{
+                        max-height: 100%;
                         margin-left: 10px;
                         color: #64748B;
                         font-size: 18px;
                         font-weight: 400;
                         font-family: Inter;
                       }
-                
+
+                      /**/
+
                       .description h1{
-                        margin-top: 800px;
+                        /*margin-top: 800px;*/
                         padding-top: 10px;
                         font-family: Inter;
                         font-size: 34px;
@@ -813,6 +817,7 @@ header {
                         .description{
                             border: 1px solid #E2E8F0;
                             margin-top: 20px;
+                            
                         }
                 
                         
