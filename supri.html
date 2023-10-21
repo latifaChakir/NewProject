@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Vos balises d'en-tête -->
+</head>
+<body>
+    
+
+    <section>
+        <div class="rec-cercle1">
+            <img src="./images/Shopping Mall.png" alt="Photo Mall">
+        </div>
+        <div id="sidebar1" class="sidebar-hidden1">
+            <h1>Products</h1>
+            
+        </div>     
+    
+         
+          
+    </section>
+
+    <script>
+
+const shopping = document.getElementById("shopping-mall");
+
+shopping.addEventListener("click", function () {
+    const newComponent = document.createElement("div");
+    newComponent.classList.add("cart-component1"); 
+
+    newComponent.innerHTML = `
+    <div class="cart-component1">
+    <div class="sty-carre-bar">
+        <div class="carre-bar" style=" width: 130px; height: 100px;">
+            <img style="width: 100%; height: 100%;" src="./images/Rectangle 4.png" alt="Photo de SHARE">
+        </div>
+    </div>
+    <div class="cart-component-info1">
+        <div class="love2">
+            <div>
+                <p style=" border-radius: 50px;border: 1px solid #94A3B8; padding: 4px 4px 4px 4px; background-color: #E2E8F0;  width: 140px;">Selected vue le 31</p>
+            </div>
+            <div class="pic1" style="display: inline-flex; gap: 10px;">
+              <img src="./images/image 8.png" alt="Photo de HEART">
+              <img src="./images/icons8-supprimer-30.png" alt="Photo de SUPPRIMER" class="deleteButton">
+            </div>
+           </div>
+                    <h1 class="shopping-price">$1200</h1>
+            <div class="love1">
+                <div class="pic1" style="display: inline-flex; gap: 20px;">
+                  <button class="incrementButton">+</button>
+                  <p class="numberDisplay">0</p>
+                  <button class="decrementButton">-</button>
+                </div>
+        </div>
+        <div class="total">
+          <h2>Total :</h2>
+          <p class="totalPrice">0</p>
+      </div>
+        
+    </div>
+</div>
+    `;
+
+  
+    const sidebar = document.getElementById("sidebar1");
+    sidebar.appendChild(newComponent);
+});
+
+
+
+let globalTotal =0;
+const incrementButtons = document.querySelectorAll(".incrementButton");
+const decrementButtons = document.querySelectorAll(".decrementButton");
+const numberDisplays = document.querySelectorAll(".numberDisplay");
+const totalPrices = document.querySelectorAll(".totalPrice");
+
+incrementButtons.forEach((incrementButton, index) => {
+    let number = 0;
+
+    incrementButton.addEventListener("click", () => {
+        number++;
+        numberDisplays[index].textContent = number;
+        calculateTotal(index);
+    });
+
+    decrementButtons[index].addEventListener("click", () => {
+        if (number > 0) {
+            number--;
+            numberDisplays[index].textContent = number;
+            calculateTotal(index);
+        }
+    });
+});
+
+const deleteButtons = document.querySelectorAll(".deleteButton");
+
+deleteButtons.forEach((deleteButton, index) => {
+    deleteButton.addEventListener("click", function() {
+        const cartComponent = deleteButton.closest(".cart-component1");
+
+        if (cartComponent) {
+            cartComponent.remove();
+            calculateTotal(index);
+            globalTotal -= calculateTotal(index);
+            updateGlobalTotal();
+        }
+        
+    });
+});
+
+function calculateTotal(index) {
+    const priceElement = document.querySelectorAll(".shopping-price")[index];
+    const price = parseFloat(priceElement.textContent.replace('$', ''));
+    const quantity = parseInt(numberDisplays[index].textContent);
+    const total = price * quantity;
+
+    totalPrices[index].textContent = `$${total}`;
+    globalTotal += total;
+
+    updateGlobalTotal();
+
+}
+
+function updateGlobalTotal() {
+const globalTotalElement = document.getElementById("globalTotal");
+if (globalTotalElement) {
+globalTotalElement.textContent = `$${globalTotal}`;
+}
+}
+
+
+
+updateGlobalTotal();
+
+    </script>
+
+    <style>
+        .lien-card a{
+  color: #334155;
+  margin-left: 390px;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+.sidebar-hidden1 {
+  display: none;
+  width: 300px;
+  height: 600px;
+  position: relative;
+  right: 10px;
+ 
+}
+
+.carre1{
+  position: absolute;
+    width: 130px;
+    height: 100px;
+   
+  
+  }
+  .sty-carre1{
+    display: flex;
+    gap: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .cart-component1 {
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+  }
+  
+  
+   h1{
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold;
+    color: #334155;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    
+  }
+  
+  .total h2{
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(140, 24, 24);
+    margin-bottom: 2px;
+    margin-left: 10px;
+    display: none;
+    
+  }
+  
+  .total p{
+    display: none;
+    font-size: 18px;
+    align-items: center;
+    font-weight: 700;
+    margin-top: 0px;
+  }
+  
+  
+  
+  .cart-component-info1 h1{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 300;
+    color: #334155;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    
+  }
+  .cart-component-info1 p{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 2px;
+   
+  }
+  
+  .cart-component-info1 span{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    color: #334155;
+  }
+  
+  .love1{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+  }
+  .love1 p{
+  margin-top: 0px;
+  }
+  .love2{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .pic1 img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .cercle2{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #94A3B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 100%;
+    margin-bottom: 10px;
+  }
+  
+  
+  .card-component-hex1{
+    border: 1px solid #E2E8F0;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+  
+  #sidebar1 {
+  position: absolute; 
+  top: 80px; 
+  right: 10px;
+  width: 500px;
+  height: 500px;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  
+  }
+  .total{
+   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+
+  }
+    </style>
+</body>
+</html>

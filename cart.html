@@ -11,64 +11,63 @@
 <body>
     <header>
         <div class="cadre">
+            <div class="header-img" style="align-items: center; justify-content: center; display: flex;">
                 <a href="index.html"><img src="./images/Amazon.png" alt="Photo amazon" style="width: 30px; height: 30px;"></a>
-                <a href="chercher.html"><input type="text" placeholder="Cherchez un produit, une marque ou catégorie"></a>   
-                <ul class="items">
-                    <li><a href="#">Sign In | Create account</a></li>
-                    <li><a href="#"><img src="./images/Morocco.png" alt="Photo de Maroc" ></a></li>
-                    <p>MAR</p>
-                    <li><a href="cart.html"><img src="./images/Shopping Cart.png" alt="Photo de carte"></a></li>
-
-                </ul>
+                <a href="chercher.html"><input type="text" placeholder="Cherchez un produit, une marque ou catégorie"></a> 
+            </div>  
+            <ul class="items">
+                <li><a href="#">Sign In | Create account</a></li>
+                <li><a href="#"><img src="./images/Morocco.png" alt="Photo de Maroc"></a></li>
+                <p>MAR</p>
+                <li><a  id="cart-link1"><img src="./images/Shopping Cart.png" alt="Photo de carte"></a></li>
+                <p id="cart-count">5</p>
+            </ul>
         </div>
     </header>
-
     <section>
         <div class="cart-grid" >
             <div class="dev" style="display: grid; ">
                 <div class="mar" style=" display: flex;">
-                    <input type="checkbox" id="1"checked>
+                    <input type="checkbox" id="1">
                     <label for="1"></label><br>
                     <p>Select All Items</p>
                 </div>
                 <div class="card-component-hex">
-                <div class="cart-component" style="margin-top: 20px;">
-                    <div class="marque" style="margin-left:3px ;">
-                        <input type="checkbox" id="2"checked>
-                        <label for="2"></label><br>
-                    </div>
-                    <div class="sty-carre">
-                        <div class="carre">
-                            <img style="width: 130px; height: 100px;" src="./images/Rectangle 4.png" alt="Photo de SHARE">
+                    <div class="cart-component1" style="margin-top: 20px;">
+                        <div class="marque" style="margin-left:3px ;">
+                            <input type="checkbox" id="4">
+                            <label for="4"></label><br>
                         </div>
-                    </div>
-                    <div class="cart-component-info">
-                        <div class="love">
-                            <h1>Product Name</h1>
-                            <div class="pic" style="display: inline-flex; gap: 10px;">
-                                <img src="./images/image 8.png" alt="Photo de star">
-                                <img src="./images/icons8-supprimer-30.png" alt="Photo de star">
+                        <div class="sty-carre">
+                            <div class="carre">
+                                <img style="width: 130px; height: 100px;" src="./images/Rectangle 4.png" alt="Photo de SHARE">
                             </div>
-                    </div>
-                        <div>
-                        <p style=" border-radius: 50px;border: 1px solid #94A3B8; padding: 4px 4px 4px 4px; background-color: #E2E8F0;  width: 140px;">Selected vue le 31</p>
-                    </div>
-                                    <h1>$1960</h1>
-                            <div class="love">
-                                <p style="color: #94A3B8;">Shopping : $15</p>
-                                <div class="pic" style="display: inline-flex; gap: 20px;">
-                                    <div class="cercle2" style="background-color: #FACC15; color: white; ">+</div>
-                                    <div class="cercle2" >-</div>
-                                </div>
                         </div>
-                        
-                    </div>
-            </div>
-            
-            <div class="cart-component" style="margin-top: 20px;">
+                        <div class="cart-component-info">
+                            <div class="love2">
+                                <div>
+                                    <p style=" border-radius: 50px;border: 1px solid #94A3B8; padding: 4px 4px 4px 4px; background-color: #E2E8F0;  width: 140px;">Selected vue le 31</p>
+                                </div>
+                                <div class="pic1" style="display: inline-flex; gap: 10px;">
+                                  <img src="./images/image 8.png" alt="Photo de HEART">
+                                  <img src="./images/icons8-supprimer-30.png" alt="Photo de SUPPRIMER" class="deleteButton">
+                                </div>
+                            </div>
+                                        <h1 class="shopping-price">$2000</h1>
+                                <div class="love1">
+                                    <div class="pic1" style="display: inline-flex; gap: 20px;">
+                                      <button class="incrementButton">+</button>
+                                      <p class="numberDisplay">0</p>
+                                      <button class="decrementButton">-</button>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                </div>
+            <div class="cart-component1" style="margin-top: 20px;">
                 <div class="marque" style="margin-left:3px ;">
-                    <input type="checkbox" id="3"checked>
-                    <label for="3"></label><br>
+                    <input type="checkbox" id="4">
+                    <label for="4"></label><br>
                 </div>
                 <div class="sty-carre">
                     <div class="carre">
@@ -76,30 +75,30 @@
                     </div>
                 </div>
                 <div class="cart-component-info">
-                    <div class="love1">
+                    <div class="love2">
                         <div>
                             <p style=" border-radius: 50px;border: 1px solid #94A3B8; padding: 4px 4px 4px 4px; background-color: #E2E8F0;  width: 140px;">Selected vue le 31</p>
                         </div>
-                        <div class="pic" style="display: inline-flex; gap: 10px;">
-                            <img src="./images/image 8.png" alt="Photo de HEART">
-                            <img src="./images/icons8-supprimer-30.png" alt="Photo de SUPPRIMER">
+                        <div class="pic1" style="display: inline-flex; gap: 10px;">
+                          <img src="./images/image 8.png" alt="Photo de HEART">
+                          <img src="./images/icons8-supprimer-30.png" alt="Photo de SUPPRIMER" class="deleteButton">
                         </div>
-                </div>
-                                <h1>$1960</h1>
-                        <div class="love">
-                            <p style="color: #94A3B8;">Shopping : $15</p>
-                            <div class="pic" style="display: inline-flex; gap: 20px;">
-                                <div class="cercle2" style="background-color: #FACC15; color: white; ">+</div>
-                                <div class="cercle2" >-</div>
-                            </div>
                     </div>
+                                <h1 class="shopping-price">$120</h1>
+                        <div class="love1">
+                            <div class="pic1" style="display: inline-flex; gap: 20px;">
+                              <button class="incrementButton">+</button>
+                              <p class="numberDisplay">0</p>
+                              <button class="decrementButton">-</button>
+                            </div>
+                        </div>
                     
                 </div>
         </div>
         
-        <div class="cart-component" style="margin-top: 20px;">
+        <div class="cart-component1" style="margin-top: 20px;">
             <div class="marque" style="margin-left:3px ;">
-                <input type="checkbox" id="4"checked>
+                <input type="checkbox" id="4">
                 <label for="4"></label><br>
             </div>
             <div class="sty-carre">
@@ -108,23 +107,23 @@
                 </div>
             </div>
             <div class="cart-component-info">
-                <div class="love1">
+                <div class="love2">
                     <div>
                         <p style=" border-radius: 50px;border: 1px solid #94A3B8; padding: 4px 4px 4px 4px; background-color: #E2E8F0;  width: 140px;">Selected vue le 31</p>
                     </div>
-                    <div class="pic" style="display: inline-flex; gap: 10px;">
-                        <img src="./images/image 8.png" alt="Photo de star">
-                        <img src="./images/icons8-supprimer-30.png" alt="Photo de star">
+                    <div class="pic1" style="display: inline-flex; gap: 10px;">
+                      <img src="./images/image 8.png" alt="Photo de HEART">
+                      <img src="./images/icons8-supprimer-30.png" alt="Photo de SUPPRIMER" class="deleteButton">
                     </div>
-            </div>
-                            <h1>$1960</h1>
-                    <div class="love">
-                        <p style="color: #94A3B8;">Shopping : $15</p>
-                        <div class="pic" style="display: inline-flex; gap: 20px;">
-                            <div class="cercle2" style="background-color: #FACC15; color: white; ">+</div>
-                            <div class="cercle2" >-</div>
-                        </div>
                 </div>
+                            <h1 class="shopping-price">$1200</h1>
+                    <div class="love1">
+                        <div class="pic1" style="display: inline-flex; gap: 20px;">
+                          <button class="incrementButton">+</button>
+                          <p class="numberDisplay">0</p>
+                          <button class="decrementButton">-</button>
+                        </div>
+                    </div>
                 
             </div>
     </div>
@@ -138,7 +137,7 @@
                 <p>13/10/2023</p>
             </div>
             <div class="Shopping">
-                <span>Shopping Free</span>
+                <span>Shipping Free</span>
                 <p>V5 $3+$20</p>
             </div>
             
@@ -152,21 +151,126 @@
             
              <div class="paiment">
             <h1>Payment Methods</h1>
-            <span>Shopping free</span>
+            <span>Shipping free</span>
         </div>
             </div>
             
     </div>
         
     </section>
-    
-    <footer>
-    <ul>
-        <li>About</li>
-        <li>Support</li>
-        <li>FQA</li>
-    </ul>
-    <p>Copy right 2023</p>
-</footer>
+    <!------------------------------------------------------sidebar-------------------------------------------->
+    <section>
+        <div id="sidebar1" class="sidebar-hidden1">
+            <h1>Products</h1>
+            <div class="cart-component1">
+              <div class="sty-carre-bar">
+                  <div class="carre-bar" style=" width: 130px; height: 100px;">
+                      <img style="width: 100%; height: 100%;" src="./images/Rectangle 4.png" alt="Photo de SHARE">
+                  </div>
+              </div>
+              <div class="cart-component-info1">
+                  <div class="love2">
+                      <div>
+                          <p style=" border-radius: 50px;border: 1px solid #94A3B8; padding: 4px 4px 4px 4px; background-color: #E2E8F0;  width: 140px;">Selected vue le 31</p>
+                      </div>
+                      <div class="pic1" style="display: inline-flex; gap: 10px;">
+                        <img src="./images/image 8.png" alt="Photo de HEART">
+                        <img src="./images/icons8-supprimer-30.png" alt="Photo de SUPPRIMER" class="deleteButton">
+                      </div>
+                     </div>
+                              <h1 class="shopping-price">$1200</h1>
+                      <div class="love1">
+                          <div class="pic1" style="display: inline-flex; gap: 20px;">
+                            <button class="incrementButton">+</button>
+                            <p class="numberDisplay">0</p>
+                            <button class="decrementButton">-</button>
+                          </div>
+                  </div>
+                  <div class="total">
+                    <h2>Total :</h2>
+                    <p class="totalPrice">0</p>
+                </div>
+                  
+              </div>
+      </div>
+      
+      <div class="cart-component1">
+        <div class="sty-carre-bar">
+            <div class="carre-bar"  style=" width: 130px; height: 100px;">
+                <img style="width: 100%; height: 100%;" src="./images/Rectangle 4.png" alt="Photo de SHARE">
+            </div>
+        </div>
+        <div class="cart-component-info1">
+            <div class="love2">
+                <div>
+                    <p style=" border-radius: 50px;border: 1px solid #94A3B8; padding: 4px 4px 4px 4px; background-color: #E2E8F0;  width: 140px;">Selected vue le 31</p>
+                </div>
+                <div class="pic1" style="display: inline-flex; gap: 10px;">
+                  <img src="./images/image 8.png" alt="Photo de HEART">
+                  <img src="./images/icons8-supprimer-30.png" alt="Photo de SUPPRIMER" class="deleteButton">
+                </div>
+               </div>
+                        <h1 class="shopping-price">$1200</h1>
+                <div class="love1">
+                    <div class="pic1" style="display: inline-flex; gap: 20px;">
+                      <button class="incrementButton">+</button>
+                      <p class="numberDisplay">0</p>
+                      <button class="decrementButton">-</button>
+                    </div>
+            </div>
+            <div class="total">
+              <h2>Total :</h2>
+              <p class="totalPrice">0</p>
+          </div>
+            
+        </div>
+    </div>
+    <div  class="cart-component1">
+        <div class="sty-carre-bar">
+            <div class="carre-bar"  style=" width: 130px; height: 100px;">
+                <img style="width: 100%; height: 100%;" src="./images/Rectangle 4.png" alt="Photo de SHARE">
+            </div>
+        </div>
+        <div class="cart-component-info1">
+            <div class="love2">
+                <div>
+                    <p style=" border-radius: 50px;border: 1px solid #94A3B8; padding: 4px 4px 4px 4px; background-color: #E2E8F0;  width: 140px;">Selected vue le 31</p>
+                </div>
+                <div class="pic1" style="display: inline-flex; gap: 10px;">
+                  <img src="./images/image 8.png" alt="Photo de HEART">
+                  <img src="./images/icons8-supprimer-30.png" alt="Photo de SUPPRIMER" class="deleteButton">
+                </div>
+               </div>
+                        <h1 class="shopping-price">$1200</h1>
+                <div class="love1">
+                    <div class="pic1" style="display: inline-flex; gap: 20px;">
+                      <button class="incrementButton">+</button>
+                      <p class="numberDisplay">0</p>
+                      <button class="decrementButton">-</button>
+                    </div>
+            </div>
+            <div class="total">
+              <h2>Total :</h2>
+              <p class="totalPrice">0</p>
+            </div>
+            
+        </div>
+        
+    </div>
+        <div class="total-globale">
+            <h3>Total :</h3>
+            <p id="globalTotal">0</p>
+        </div>     
+        
+    <div class="lien-card">
+        <a href="cart.html">voir details  > </a> 
+      </div>
+         
+          
+    </section>
+        <script src="index.js"></script>
+        
+
+
 </body>
 </html>

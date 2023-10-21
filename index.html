@@ -14,13 +14,13 @@
                 <a href="index.html"><img src="./images/Amazon.png" alt="Photo amazon" style="width: 30px; height: 30px;"></a>
                 <a href="chercher.html"><input type="text" placeholder="Cherchez un produit, une marque ou catégorie"></a> 
             </div>  
-                <ul class="items">
-                    <li><a href="#">Sign In | Create account</a></li>
-                    <li><a href="#"><img src="./images/Morocco.png" alt="Photo de Maroc"></a></li>
-                    <p>MAR</p>
-                    <li><a href="cart.html"><img src="./images/Shopping Cart.png" alt="Photo de carte"></a></li>
-                    
-                </ul>
+            <ul class="items">
+                <li><a href="#">Sign In | Create account</a></li>
+                <li><a href="#"><img src="./images/Morocco.png" alt="Photo de Maroc"></a></li>
+                <p>MAR</p>
+                <li><a  id="cart-link1"><img src="./images/Shopping Cart.png" alt="Photo de carte"></a></li>
+                <p id="cart-count">5</p>
+            </ul>
         </div>
     </header>
     <main>
@@ -121,9 +121,7 @@
         </div>
     </section>
 
-
-
-    <!---Products-->
+    <!-------------------------------------------Products-------------------------------------->
     <section>
         <h1>#Best Products</h1>
         <div class="container1">
@@ -144,7 +142,7 @@
                 </div>
                     <p style="margin-left: 1px; font-size:large; color: #94A3B8; border-left: 1px solid #94A3B8; padding-left: 6px;">Sold 120</p>
                     <div class="rec-cercle1">
-                        <img src="./images/Shopping Mall.png" alt="Photo Mall">
+                        <img src="./images/Shopping Mall.png" alt="Photo Mall" >
                     </div>
             </div>
             </div>
@@ -165,7 +163,7 @@
                 </div>
                     <p style="margin-left: 1px; font-size:large; color: #94A3B8; border-left: 1px solid #94A3B8; padding-left: 6px;">Sold 120</p>
                     <div class="rec-cercle1">
-                        <img src="./images/Shopping Mall.png" alt="Photo Mall">
+                        <img src="./images/Shopping Mall.png" alt="Photo Mall" id="shopping-mall">
                     </div>
             </div>
             </div>
@@ -306,6 +304,7 @@
         </div>
     </section>
     </main>
+    
 
     <footer>
         <ul>
@@ -315,5 +314,27 @@
         </ul>
         <p>Copy right 2023</p>
     </footer>
+<!---------------------------------------side bar----------------------------------------->
+<section>
+    <div id="sidebar1" class="sidebar-hidden1">
+        <h1>Products</h1>
+        <div class="total-globale">
+            <h3>Total :</h3>
+            <p id="globalTotal">0</p>
+        </div>  
+
+        <div class="lien-card">
+            <a href="cart.html">voir details  > </a> 
+          </div>
+          
+        
+    </div>     
+    
+
+
+     
+      
+</section>
+    <script src="index.js"></script>
 </body>
 </html>
