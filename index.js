@@ -1,3 +1,4 @@
+
 const cartLink = document.getElementById('cart-link1');
 const sidebar = document.getElementById('sidebar1');
 const shopping = document.getElementById("shopping-mall");
@@ -15,7 +16,9 @@ shopping.addEventListener("click", function () {
     const newComponent = document.createElement("div");
     newComponent.classList.add("cart-component1");
 
-    newComponent.innerHTML = `
+
+
+    const newContentHTML  = `
     <div class="cart-component1">
     <div class="sty-carre-bar">
         <div class="carre-bar" style=" width: 130px; height: 100px;">
@@ -49,6 +52,7 @@ shopping.addEventListener("click", function () {
 </div>
 
     `;
+    newComponent.insertAdjacentHTML('afterbegin', newContentHTML);
 
     const sidebar = document.getElementById("sidebar1");
     sidebar.appendChild(newComponent);
@@ -101,3 +105,21 @@ shopping.addEventListener("click", function () {
 
     updateGlobalTotal();
 });
+
+//navbar
+const navbarToggle = document.querySelector("#navbar-toggle");
+const navbarMenu = document.querySelector("#navbar-menu");
+let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+
+const toggleNavbarVisibility = () => {
+    isNavbarExpanded = !isNavbarExpanded;
+    navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+
+    if (isNavbarExpanded) {
+        navbarMenu.style.display = "block";
+    } else {
+        navbarMenu.style.display = "none";
+    }
+};
+
+navbarToggle.addEventListener("click", toggleNavbarVisibility);
