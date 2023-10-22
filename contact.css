@@ -1,0 +1,459 @@
+body,
+h2,
+ul,
+li,
+p {
+  margin: 10;
+  padding: 0;
+}
+
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.cadre {
+  border-bottom: 1px solid #E2E8F0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 1520px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.cadre p {
+    font-weight: bold;
+}
+
+
+header {
+  color: black;
+  text-align: center;
+  padding: 0px;
+}
+
+
+.cadre ul {
+  margin-right: 10px;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.cadre li {
+  display: inline;
+}
+
+.cadre a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.cadre input{ 
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    border: 2px solid #E2E8F0;
+  }
+.items {
+    justify-content: center;
+    align-items: center;
+    margin-left: 750px;
+    display: flex;
+    height: 20px;
+    top: 15px;
+    font-size: 18px;
+    
+  }
+  .items li a{
+    color: #334155;
+  }
+  .items p{
+    color: #334155;
+  
+  }
+  .contact-grid{
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 5px; 
+    border-radius: 10px;
+    border: 2px solid #E2E8F0;
+    background-color: rgb(208, 240, 240);
+   
+    
+    
+  }
+
+  .contact-grid h1{
+    font-family: Inknut Antiqua;
+    font-size: 30px;
+  }
+
+  .contact-grid-para{
+   margin-left: 100px;
+    margin-top: 100px;
+    font-family: Inknut Antiqua;
+   
+
+  }
+
+  .contact-grid-para p{
+    width: 75%;
+  }
+
+
+
+  .contact-image img {
+    margin-top: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .items-contact {
+    list-style: none;
+    display: flex; 
+    padding: 0; 
+  }
+  
+  .items-contact li {
+    margin-right: 10px; 
+  }
+  
+  .items-contact a {
+    text-decoration: none; 
+    display: flex; 
+    
+  }
+
+
+  form{
+  margin-right: 100px;
+    margin-top: 50px;
+  }
+
+  form label,
+form textarea,
+form input{
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form textarea {
+  height: 150px;
+}
+
+form button {
+  background-color: #2715F4;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  
+  
+ 
+}
+
+form label{
+  color: #334155;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+footer {
+  margin-top: 50px;
+  background-color: #334155;
+  text-align: center;
+  width: 100%;
+  height: 166px;
+
+}
+footer li {
+  margin-top: 50px;
+  list-style: none;
+}
+
+footer ul {
+display: flex;
+gap: 50px;
+justify-content: center;
+color: white;
+font-family: Inter;
+font-size: 22px;
+font-weight: 400;
+letter-spacing: 0em;
+}
+
+footer p{
+margin-top: 30px;
+color: #94A3B8;
+font-family: Inter;
+font-size: 17px;
+
+}
+
+
+/*responsibe*/
+@media screen and (max-width: 1266px) {
+
+  .cadre {
+    border-bottom: 1px solid #E2E8F0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    flex-shrink: 0;
+    margin-left: auto;
+    width: auto;
+  }
+
+  .items {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    display: flex;
+    height: 20px;
+    top: 15px;
+    font-size: 18px;
+    
+  }
+  
+  
+
+  .contact-grid{
+    margin-top: 50px;
+    display: block;
+    gap: 5px; 
+    border-radius: 10px;
+   margin-left: 100px;
+   margin-right: 100px;
+   
+    
+    
+  }
+
+  .contact-grid h1{
+    font-family: Inknut Antiqua;
+    font-size: 35px;
+  }
+
+  .contact-grid-para{
+   margin-left: 100px;
+    margin-top: 100px;
+    font-family: Inknut Antiqua;
+   
+
+  }
+
+  .contact-grid-para p{
+    font-size: 20px;
+  }
+
+
+
+  .contact-image img {
+    margin-top: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .items-contact {
+    list-style: none;
+    display: flex; 
+    padding: 0; 
+  }
+  
+  .items-contact li {
+    margin-right: 10px; 
+  }
+  
+  .items-contact a {
+    text-decoration: none; 
+    display: flex; 
+    
+  }
+
+
+  form{
+    margin-left: 20px;
+  margin-right: 100px;
+    margin-top: 50px;
+  }
+
+  form label,
+form textarea,
+form input{
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form textarea {
+  height: 150px;
+}
+
+form button {
+  background-color: #2715F4;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  
+  
+ 
+}
+
+form label{
+  color: #334155;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+
+
+}
+
+
+@media screen and (max-width: 661px) {
+
+  .cadre {
+    border-bottom: 1px solid #E2E8F0;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    flex-shrink: 0;
+    margin-left: auto;
+    width: auto;
+  }
+
+  .items {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    display: flex;
+    height: 20px;
+    top: 15px;
+    font-size: 18px;
+    
+  }
+
+  .contact-grid{
+    margin-top: 50px;
+    display: block;
+    gap: 5px; 
+    border-radius: 10px;
+   margin-left: auto;
+   margin-right: auto;
+   
+    
+    
+  }
+
+  .contact-grid h1{
+    font-family: Inknut Antiqua;
+    font-size: 35px;
+  }
+
+  .contact-grid-para{
+   margin-left: auto;
+    margin-top: 100px;
+    font-family: Inknut Antiqua;
+   
+
+  }
+
+  .contact-grid-para p{
+    font-size: 20px;
+  }
+
+
+
+  .contact-image img {
+    margin-top: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .items-contact {
+    list-style: none;
+    display: flex; 
+    padding: 0; 
+  }
+  
+  .items-contact li {
+    margin-right: 10px; 
+  }
+  
+  .items-contact a {
+    text-decoration: none; 
+    display: flex; 
+    
+  }
+
+
+  form{
+    margin-left: auto;
+  margin-right: 20px;
+    margin-top: 50px;
+  }
+
+  form label,
+form textarea,
+form input{
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form textarea {
+  height: 150px;
+}
+
+form button {
+  background-color: #2715F4;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  
+  
+ 
+}
+
+form label{
+  color: #334155;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+
+
+}
+
+
+  
