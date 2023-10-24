@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Slider Interactif</title>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide">
+            <img src="./images/Rectangle 4.png" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="./images/Rectangle 6.png" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="./images/Rectangle 7.png" alt="Image 3">
+        </div>
+    </div>
+    <button class="prev-button">Précédent</button>
+    <button class="next-button">Suivant</button>
+    <style>
+        /* Styles pour le slider et les diapositives */
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* Styles pour les boutons de navigation */
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Masquer les boutons de navigation sur mobile */
+@media (max-width: 768px) {
+    button {
+        display: none;
+    }
+}
+
+    </style>
+    <script>
+        let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(n) {
+    if (n >= slides.length) {
+        slideIndex = 0;
+    }
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    slides[slideIndex].style.display = 'block';
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+}
+
+showSlide(slideIndex);
+
+document.querySelector('.next-button').addEventListener('click', nextSlide);
+document.querySelector('.prev-button').addEventListener('click', prevSlide);
+
+    </script>
+</body>
+</html>
+
+
+
