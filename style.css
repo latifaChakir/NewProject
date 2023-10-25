@@ -737,6 +737,7 @@ height: 53px;
 border-radius: 2px;
 width: 200px;
 color: #94A3B8;
+background-color: #f5edce;
 
 
 }
@@ -747,6 +748,29 @@ height: auto;
 display: flex;
 gap: 10px;
 }
+
+.contenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+}
+
+}
+
+@media screen and (max-width: 438px) {
+
+  .rectangle{
+    width: 320px;
+  }
+  .rectangle img{
+    max-width: 100%;
+  }
+  .rec-cercle {
+    margin-left: 0px;
+  } 
+  .rectangle2 {
+    margin-left: 0px;
+  }
 
 }
 

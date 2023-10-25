@@ -782,6 +782,20 @@ h1 {
 }
 
 
+@media screen and (max-width: 1467px) {
+  .container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+  }
+}
+@media screen and (max-width: 1424px) {
+  .page2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  
+}
 
 @media screen and (max-width: 650px) {
 

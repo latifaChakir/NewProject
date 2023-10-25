@@ -40,6 +40,7 @@ function deleteItem(newComponent) {
 
 //notification
 const notificationBadge = document.querySelector('.notification-badge');
+console.log(notificationBadge);
 notificationBadge.textContent = sidebarItems.length;
 
 function updateNotificationBadge() {
@@ -100,7 +101,28 @@ function updateAffichagePanie() {
         deleteItem(newComponent);
         calculateTotal();
 
-    
+        const incrementButton = newComponent.querySelector(".incrementButton");
+        const decrementButton = newComponent.querySelector(".decrementButton");
+        const numberDisplay = newComponent.querySelector(".numberDisplay");
+        let number = parseInt(numberDisplay.textContent);
+        
+
+        incrementButton.addEventListener("click", () => {
+            number++;
+            numberDisplay.textContent = number;
+            calculateTotal();
+        });
+
+        decrementButton.addEventListener("click", () => {
+            if (number > 1) {
+                number--;
+                numberDisplay.textContent = number;
+                calculateTotal();
+            }
+        });
+
+
+
     }
 }
 
@@ -169,7 +191,7 @@ shopping.forEach(Image => {
         const numberDisplay = newComponent.querySelector(".numberDisplay");
         const priceElement = newComponent.querySelector(".shopping-price");
         const totalPrice = newComponent.querySelector(".totalPrice");
-        let number =  parseInt(numberDisplay.textContent);
+        let number = parseInt(numberDisplay.textContent);
         calculateTotal();
         incrementButton.addEventListener("click", () => {
             number++;
@@ -185,15 +207,15 @@ shopping.forEach(Image => {
             }
         });
 
-            const deleteButton = newComponent.querySelector(".deleteButton");
-            deleteButton.addEventListener("click", () => {
-                newComponent.remove();  
-                    calculateTotal();
-                    updateNotificationBadge();
-        
-                
-            });
-        
+        const deleteButton = newComponent.querySelector(".deleteButton");
+        deleteButton.addEventListener("click", () => {
+            newComponent.remove();
+            calculateTotal();
+            updateNotificationBadge();
+
+
+        });
+
         function calculateTotal() {
             const price = parseFloat(priceElement.textContent.replace('$', ''));
             const total = price * number;
@@ -221,7 +243,7 @@ shopping.forEach(Image => {
         localStorage.setItem('sidebarItems', JSON.stringify(sidebarItems));
 
     });
-  
+
 
 });
 
@@ -255,6 +277,105 @@ const toggleItemsVisibility = () => {
 };
 
 const clickableTd = document.querySelector("td");
-clickableTd.addEventListener("click", toggleItemsVisibility);
+clickableTd?.addEventListener("click", toggleItemsVisibility);
+
+//validate form
+
+var nomInput = document.getElementById("nom");
+var prenomInput = document.getElementById("prenom");
+var telephoneInput = document.getElementById("telephone");
+var emailInput = document.getElementById("email"); 
+var message = document.getElementById("message");
+
+nomInput?.addEventListener("input", function () {
+    validateNom();
+});
+prenomInput?.addEventListener("input", function () {
+    validatePrenom();
+});
 
 
+telephoneInput?.addEventListener("input", function () {
+    validateTelephone();
+});
+
+emailInput?.addEventListener("input", function () {
+    validateEmail();
+});
+
+function validateNom() {
+    var nom = nomInput.value;
+    var nomRegex = /^[A-Za-z\s]+$/;
+    if (!nom.match(nomRegex)) {
+        message.innerHTML = "Le nom doit contenir uniquement des lettres et des espaces au cas de besoin.";
+    } else {
+        message.innerHTML = "";
+    }
+}
+function validatePrenom() {
+    var prenom = prenomInput.value;
+    var prenomRegex = /^[A-Za-z\s]+$/;
+    if (!prenom.match(prenomRegex)) {
+        message.innerHTML = "Le prénom doit contenir uniquement des lettres et des espaces au cas de besoin.";
+    } else {
+        message.innerHTML = "";
+    }
+}
+
+function validateTelephone() {
+    var telephone = telephoneInput.value;
+    var telephoneRegex = /^\d{10}$/;
+    if (!telephone.match(telephoneRegex)) {
+        message.innerHTML = "Le numéro de téléphone doit contenir 10 chiffres. Veuillez saisir votre numéro avec 10 chiffres.";
+    } else {
+        message.innerHTML = "";
+    }
+}
+
+function validateEmail() {
+    var email = emailInput.value;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.match(emailRegex)) {
+        message.innerHTML = "Veuillez saisir une adresse email valide qui contient un symbole '@' avec le nom de domaine.";
+    } else {
+        message.innerHTML = "";
+    }
+}
+
+
+//slide
+
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(n) {
+    if (n >= slides.length) {
+        slideIndex = 0;
+    }
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    slides[slideIndex].style.display = 'block';
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+}
+
+function autoSlide() {
+    nextSlide();
+}
+
+setInterval(autoSlide, 2000); 
+
+showSlide(slideIndex);

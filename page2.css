@@ -608,7 +608,29 @@ h1 {
 
 
 
-/*tablette*/
+/*laptop*/
+
+@media screen and (max-width: 1311px) {
+  .container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+  }
+  .chercher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+  }
+  .shop {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+
+}
+
 /*TABLETTE*/
 
 @media screen and (max-width: 768px) {
@@ -861,11 +883,6 @@ h1 {
 }
 
 
-
-
-
-
-
 /*responsibe*/
 @media screen and (max-width: 425px) {
 
@@ -873,8 +890,7 @@ h1 {
   .page2 {
     display: block;
     gap: 1px;
-    height: 100vh;
-
+    
   }
 
   .chercher {
@@ -1069,7 +1085,6 @@ h1 {
 
 
   footer {
-    margin-top: 300px;
     background-color: #334155;
     text-align: center;
     width: 100%;
@@ -1077,29 +1092,7 @@ h1 {
 
   }
 
-  footer li {
-    margin-top: 50px;
-    list-style: none;
-  }
 
-  footer ul {
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    color: white;
-    font-family: Inter;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0em;
-  }
-
-  footer p {
-    margin-top: 30px;
-    color: #94A3B8;
-    font-family: Inter;
-    font-size: 17px;
-
-  }
 
 
 }
